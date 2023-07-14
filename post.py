@@ -1,7 +1,7 @@
 import requests
 
+#api_url = "https://precily.azurewebsites.net/api/endpoint"
 api_url = "http://127.0.0.1:5000/api/endpoint"
-
 payload = {
     "text1": "money money money",
     "text2": "money money money"
