@@ -11,9 +11,22 @@ on:
   workflow_dispatch:
 
 jobs:
+  download:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          lfs: True
+      - name: Download file
+        run: |
+          curl -L -o embeddings https://drive.google.com/file/d/1CdT-hVtsNBt59K7QA5Vwso4u4ssHQi9l/view?usp=drive_link
+          git config --global user.email "jonaschris2103@gmail.com"
+          git config --global user.name "projectultra"
+          git add embeddings
+          git commit -m "addede embeddings v2"
+          git push
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
         with:
