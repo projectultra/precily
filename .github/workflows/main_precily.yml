@@ -19,7 +19,7 @@ jobs:
           lfs: True
       - name: Download file
         run: |
-          curl -L -o embeddings https://drive.google.com/file/d/1CdT-hVtsNBt59K7QA5Vwso4u4ssHQi9l/view?usp=drive_link
+          wget -o embeddings https://drive.google.com/file/d/1CdT-hVtsNBt59K7QA5Vwso4u4ssHQi9l/view?usp=drive_link
           git config --global user.email "jonaschris2103@gmail.com"
           git config --global user.name "projectultra"
           git add embeddings
